@@ -15,4 +15,4 @@ oclean:
 
 fclean: oclean clean
 
-re: oclean al
+re: oclean all
