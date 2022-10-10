@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- * main - check the code
  * _isupper - the function that checks for uppercase letters
  * @c: the parameter
  * Return: Always 0.
