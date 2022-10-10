@@ -1,7 +1,9 @@
 #include "main.h"
+
 /**
  * more_numbers - more numbers indeed
  */
+
 void more_numbers(void)
 {
 	int x, y;
