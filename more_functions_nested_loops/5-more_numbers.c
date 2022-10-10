@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more numbers - more numbers indeed
+ * more_numbers - more numbers indeed
  */
 void more_numbers(void)
 {
