@@ -1,11 +1,13 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_triangle = print triangle
+ * print_triangle - prints a triangle,
+ * followed by a new line
  * @size: the given value
  */
+
 void print_triangle(int size)
+
 {
 	int x;
 	int y;
