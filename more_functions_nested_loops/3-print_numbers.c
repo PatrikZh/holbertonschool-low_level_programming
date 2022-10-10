@@ -3,8 +3,6 @@
 
 /**
  * print_numbers  - the function that multiplicates
- * @a: the given components
- * Return: Always 0.
  */
 void print_numbers(void)
 {
