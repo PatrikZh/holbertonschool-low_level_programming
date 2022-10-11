@@ -2,16 +2,18 @@
 #include "main.h"
 
 /**
- * _puts - the function
- * @str: the given value
+ * print_rev - the function
+ * @s: the given value
  */
 
-void _puts(char *str)
+void print_rev(char *s)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i--)
-		_putchar(str[i]);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	for (j = i; s[j] != '\0'; j--)
+		_putchar(s[i]);
 	_putchar('\n');
 }
-
