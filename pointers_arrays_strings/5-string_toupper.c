@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *
+ *string_toupper - the functio n
+ *@a: the given value
+ *Return: return result
  */
 
 char *string_toupper(char *a)
