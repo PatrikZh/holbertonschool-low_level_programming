@@ -4,7 +4,7 @@
  * _strspn - function
  * @accept: the given value
  * @s: the given value
- * Return - result
+ * Return: result
  */
 
 unsigned int _strspn(char *s, char *accept)
