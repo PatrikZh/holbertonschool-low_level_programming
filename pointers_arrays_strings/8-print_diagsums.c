@@ -9,7 +9,17 @@
 
 void print_diagsums(int *a, int size)
 {
-	
+	int i;
+	int sumOne, sumTwo;
 
-
+	i = 0;
+	sumOne = 0;
+	sumTwo = 0;
+	while (i < size)
+	{
+		sumOne += a[(size + 1) * i];
+		sumTwo += a[(size - 1) * (i + 1)];
+		i++;
+	}
+	printf("%d, %d\n", sumOne, sumTwo);
 }
