@@ -26,24 +26,25 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	str = malloc(sizeof(char) * (s1[u] + s2[x] + 1));
+
 	if (s1)
 	{
 		while (i < u)
 		{
 			str[i] = s1[i];
-			i++;
+				i++;
 		}
-	}
+		}
+			if (str == NULL)
+			return (NULL);
 	if (s2)
 	{
 		while (i < (u + x))
-		{
+        	{
 			str[i] = s2[j];
 			i++;
 			j++;
 		}
-		if (str == NULL)
-			return (NULL);
 	}
 	return (str);
 }
