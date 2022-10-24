@@ -26,6 +26,11 @@ char *_strdup(char *str)
 		return (NULL);
 
 	}
+	if (a == NULL)
+	{
+		return (NULL);
+
+	}
 	while ((a[u] = str[u]) != '\0')
 	{
 		u++;
