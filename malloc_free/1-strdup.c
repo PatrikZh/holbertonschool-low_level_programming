@@ -9,7 +9,7 @@
 
 char *_strdup(char *str)
 {
-	char *a;
+	char *s;
 	unsigned int i, u;
 
 	i = 0;
@@ -19,21 +19,21 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	a = malloc(sizeof(char) * i + 1);
+	s = malloc(sizeof(char) * i + 1);
 
 	if (str == NULL)
 	{
 		return (NULL);
 
 	}
-	if (a == NULL)
+	if (s == NULL)
 	{
 		return (NULL);
 
 	}
-	while ((a[u] = str[u]) != '\0')
+	while ((s[u] = str[u]) != '\0')
 	{
 		u++;
 	}
-	return (a);
+	return (s);
 }
