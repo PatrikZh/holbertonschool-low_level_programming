@@ -4,7 +4,7 @@
 /**
  * malloc_checked - function
  * @b: the given value
- * Return - result
+ * Return: result
  */
 
 void *malloc_checked(unsigned int b)
