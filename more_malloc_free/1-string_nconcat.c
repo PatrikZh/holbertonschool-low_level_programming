@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (len2 = 0; s2[len2] != '\0'; len2++)
 	{
 	}
-	if (n < len2)
+	if (n <= len2)
 		len2 = n;
 
 	pointer = malloc((len1 + len2) * sizeof(char));
