@@ -9,8 +9,22 @@
  * Return: Always 0.
  */
 
-int main(__attribute__((unused))int argc, char **argv)
+int main(int argc, char **argv)
 {
-	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	char *operator;
+
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	operator = argv[2];
+	if ((operator == '/' || operator == '%') && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	printf("%d\n", get_op_func(operator)(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
