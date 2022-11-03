@@ -1,7 +1,9 @@
 #include "3-calc.h"
 #include <stdio.h>
 /**
- *
+ * get_op_func - function
+ * @s: parameter
+ * Return: result
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -14,10 +16,13 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i;
-	for (i = 0; ops[i].op != NULL; i++)
+
+	i = 0;
+	while (ops[i].op != NULL)
 	{
 		if (*s == *ops[i].op)
 			return (ops[i].f);
+		i++;
 	}
 	return (NULL);
 }
