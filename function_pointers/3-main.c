@@ -11,20 +11,18 @@
 
 int main(int argc, char **argv)
 {
-	char *operator;
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	operator = argv[2];
-	if ((operator == '/' || operator == '%') && atoi(argv[3]) == 0)
+
+	if (strlen(argv[2]) > 1)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", get_op_func(operator)(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
