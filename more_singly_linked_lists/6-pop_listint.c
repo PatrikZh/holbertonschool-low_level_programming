@@ -9,9 +9,8 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *temp;
-	int n;
+	int n = 0;
 
-	n = 0;
 	while (*head)
 	{
 		n = (*head)->n;
