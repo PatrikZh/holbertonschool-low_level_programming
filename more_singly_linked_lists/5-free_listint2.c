@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - function
- * @head: the continous node
+ * @head: the continous first node
  */
 
 void free_listint2(listint_t **head)

@@ -2,7 +2,7 @@
 
 /**
  * add_nodeint_end - function
- * @head: the given value
+ * @head: the continous first node
  * @n: the given value
  * Return: result
  */

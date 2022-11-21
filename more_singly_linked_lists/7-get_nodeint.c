@@ -2,7 +2,7 @@
 
 /**
  * get_nodeint_at_index - function
- * @head: the continous node
+ * @head: the continous first node
  * @index: the given value
  * Return: result
  */

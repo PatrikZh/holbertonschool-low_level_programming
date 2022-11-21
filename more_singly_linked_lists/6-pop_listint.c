@@ -2,7 +2,7 @@
 
 /**
  * pop_listint - function
- * @head: the continous node
+ * @head: the continous first node
  * Return: result
  */
 
