@@ -9,5 +9,14 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int value = sizeof()	
+	unsigned long int XOR = n ^ m;
+	int count = 0;
+
+	while (XOR)
+	{
+		count += (XOR & 1);
+		XOR >>= 1;
+	}
+
+	return (count);
 }
