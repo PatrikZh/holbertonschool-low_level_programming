@@ -45,6 +45,7 @@ void print_str(va_list ap)
 }
 /**
  * print_all - function
+ * @format: parameter
  */
 
 void print_all(const char * const format, ...)
@@ -53,7 +54,7 @@ void print_all(const char * const format, ...)
 
 	va_list(arg);
 
-	va_start(arg,format);
+	va_start(arg, format);
 
 	i = 0;
 	while (format[i] != '\0')
@@ -61,16 +62,16 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case ('c'):
-				printf("%c", va_arg(arg, int));
+				printf("%c, ", va_arg(arg, int));
 				break;
 			case ('i'):
-				printf("%d", va_arg(arg, int));
+				printf("%d, ", va_arg(arg, int));
 				break;
 			case ('s'):
-				printf("%s", va_arg(arg, char*));
+				printf("%s, ", va_arg(arg, char*));
 				break;
 			case ('f'):
-				printf("%f", va_arg(arg, double));
+				printf("%f, ", va_arg(arg, double));
 				break;
 
 
