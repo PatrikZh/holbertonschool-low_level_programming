@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 
 	va_start(arg,format);
 
-	s = va_arg(arg, char *)
+	s = va_arg(arg, char *);
 
 	i = 0;
 	while (format[i] != '\0')
@@ -70,11 +70,12 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(arg, int));
 				break;
 			case ('s'):
-				printf("%s", va_arg(arg, char *));
+				printf("%s", va_arg(arg, char*));
 				break;
 			case ('f'):
 				printf("%f", va_arg(arg, double));
 				break;
+
 
 		}
 		i++;
