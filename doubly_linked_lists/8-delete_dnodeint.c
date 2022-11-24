@@ -1,7 +1,10 @@
 #include "lists.h"
 
 /**
- *
+ * delete_dnodeint_at_index - function
+ * @head: double pointer/double link list parameter
+ * @index: parameter
+ * Return: result
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
