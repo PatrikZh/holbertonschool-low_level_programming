@@ -40,8 +40,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	temporary->n = n;
 	temporary->next = pointer->next;
+	temporary->prev = pointer;
 	pointer->next->prev = temporary;
 	pointer->next = temporary;
-	temporary->prev = pointer;
 	return (temporary);
 }
