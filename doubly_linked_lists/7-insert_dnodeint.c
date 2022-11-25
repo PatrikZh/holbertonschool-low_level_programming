@@ -20,9 +20,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	temporary->n = n;
 	if (idx == 0)
 	{
-		temporary->next = pointer;
-		*h = temporary;
-		return (temporary);
+		return (add_dnodeint(h, n));
 	}
 	count = 0;
 	while (count != idx - 1)
@@ -31,12 +29,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 		pointer = pointer->next;
 		count++;
-	}
-	if (temporary->next == NULL)
-	{
-		temporary->next = pointer;
-                *h = temporary;
-                return (temporary);
 	}
 	temporary->n = n;
 	temporary->next = pointer->next;
