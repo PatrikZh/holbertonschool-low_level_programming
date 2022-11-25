@@ -7,6 +7,7 @@
  * @n: parameter
  * Return: result
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temporary, *pointer;
@@ -31,10 +32,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		pointer = pointer->next;
 		count++;
 	}
+	if (temporary->next == NULL)
+	{
+		pointer->next = temporary;
+		temporary->prev = pointer;
+		return (temporary);
+	}
 	temporary->n = n;
 	temporary->next = pointer->next;
-	temporary->prev = pointer;
 	pointer->next->prev = temporary;
 	pointer->next = temporary;
+	temporary->prev = pointer;
 	return (temporary);
 }
