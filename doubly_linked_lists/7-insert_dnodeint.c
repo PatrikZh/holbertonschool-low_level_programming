@@ -34,9 +34,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	if (temporary->next == NULL)
 	{
-		pointer->next = temporary;
-		temporary->prev = pointer;
-		return (temporary);
+		temporary->next = pointer;
+                *h = temporary;
+                return (temporary);
 	}
 	temporary->n = n;
 	temporary->next = pointer->next;
