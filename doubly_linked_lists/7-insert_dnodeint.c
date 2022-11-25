@@ -20,7 +20,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	while (count != idx - 1)
 	{
-		if (pointer == NULL || pointer->next == NULL)
+		if (pointer == NULL)
 			return (NULL);
 		pointer = pointer->next;
 		count++;
