@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	if (close(temp1))
-		dprintf(STDERR_FILENO, "Error: Can't close temp %d\n", temp1), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", temp1), exit(100);
 	if (close(temp2))
 		dprintf(STDERR_FILENO, "Error: Can't close temp %d\n", temp2), exit(100);
 
