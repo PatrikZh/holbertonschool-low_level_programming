@@ -50,34 +50,37 @@ void print_str(va_list ap)
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	print_format form[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"s", print_str},
+		{"f", print_float},
+		{NULL, NULL}	
+	};
+	
+	va_list(ap);
+	
+	int i = 0;
+	int j = 0;
+	char *seperator = "";
 
-	va_list(arg);
+	va_start(ap, format);
 
-	va_start(arg, format);
-
-	i = 0;
-	while (format[i] != '\0')
+	while (format && format[i])
 	{
-		switch (format[i])
+		while (form[j].str)
 		{
-			case ('c'):
-				printf("%c, ", va_arg(arg, int));
-				break;
-			case ('i'):
-				printf("%d, ", va_arg(arg, int));
-				break;
-			case ('s'):
-				printf("%s, ", va_arg(arg, char*));
-				break;
-			case ('f'):
-				printf("%f, ", va_arg(arg, double));
-				break;
-
-
+			if (*form[j].str == format[i])
+			{
+				printf("%s", seperator);
+				form[j].print(ap);
+				seperator = ", ";	
+			}
+			j++;
 		}
+		j = 0;
 		i++;
 	}
 	printf("\n");
-	va_end(arg);
+	va_end(ap);
 }
