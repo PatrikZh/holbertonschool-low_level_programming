@@ -55,11 +55,11 @@ void print_all(const char * const format, ...)
 		{"i", print_int},
 		{"s", print_str},
 		{"f", print_float},
-		{NULL, NULL}	
+		{NULL, NULL}
 	};
-	
+
 	va_list(ap);
-	
+
 	int i = 0;
 	int j = 0;
 	char *seperator = "";
@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", seperator);
 				form[j].print(ap);
-				seperator = ", ";	
+				seperator = ", ";
 			}
 			j++;
 		}
