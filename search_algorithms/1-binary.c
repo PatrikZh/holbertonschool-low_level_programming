@@ -31,6 +31,8 @@ int binary_search(int *array, size_t size, int value)
 			end = n - 1;
 		else
 			return (n);
+		if (array == NULL)
+			return -1;
 	}
 	return (-1);
 }
